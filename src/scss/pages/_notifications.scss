@@ -1,0 +1,83 @@
+.notifications {
+    height: 100%;
+    overflow-y: scroll;
+    .notitications__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & div:first-child {
+            color: var(--title-color);
+            & span {
+                background-color: var(--color-new-message);
+            }
+        }
+        & div:last-child {
+            display: flex;
+            align-items: center;
+
+            & span {
+                padding: 15px 5px;
+                background-color: var(--bg-addpost-color);
+                cursor: pointer;
+
+                &:hover .notifications__icon{
+                    color: red !important;
+                }
+                & .notifications__icon {
+                    color: #adb5bd !important;
+                }
+            }
+        }
+    }
+
+    .notifications__items {
+        & .notifications__item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &:hover {
+                background-color: var(--bg-notification-color);
+            }
+
+            .notifications__left {
+                display: flex;
+                padding: 15px;
+                border-radius: 5px;
+                & div {
+                    & div {
+                        display: flex;
+
+                        & h2 {
+                            color: var(--title-color);
+                            font-weight: 700;
+                            font-size: 0.95rem;
+                            cursor: pointer;
+                        }
+
+                        & p {
+                            color: var(--title-color);
+                            margin-left: 4px;
+                            font-size: 0.9rem;
+                        }
+                    }
+
+                    & + p {
+                        color: #aaaaaa;
+                        font-size: 0.8rem;
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            &:hover .notifications__right .notifications__icon {
+                color: rgb(45, 236, 87);
+            }
+
+            .notifications__right {
+                margin-right: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+.app {
+    & .app__body {
+        background: var(--bg-color);
+        display: flex;
+        flex-direction: column;
+        padding-top: 90px;
+        width: 100%;
+        overflow-y: scroll;
+        height: 100vh;
+    }
+}

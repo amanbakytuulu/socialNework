@@ -1,0 +1,58 @@
+@import "./config/variables";
+@import "./theme/theme";
+@import "./base/base";
+@import "./components/app.scss";
+
+// feed
+@import "./pages/feed";
+// feed
+
+// profile
+@import "./pages/profile";
+
+// profile
+// message
+@import "./pages/message";
+
+// message
+
+// sidebar
+@import "./components/sidebar";
+@import "./components/sidebarChat";
+@import "./components/sidebarChatRow";
+@import "./components/sidebarRow";
+// sidebar
+
+// setting
+@import "./components/setting";
+@import "./components/settingLayout";
+
+// header
+@import "./components/header";
+// header
+
+// post and story
+@import "./components/post";
+@import "./components/postDetail";
+@import "./components/addPost";
+@import "./components/story";
+@import "./components/storyAdd";
+@import "./components/storyWheel";
+// post and story
+
+// login
+@import "./authorization/login";
+@import "./authorization/signIn";
+@import "./authorization/signUp";
+@import "./authorization//resetPassword";
+// login
+
+// notific
+@import "./components/notifications";
+@import "./pages/notifications";
+
+// notific
+
+// pages
+@import "./pages/explore";
+// pages

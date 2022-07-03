@@ -1,0 +1,49 @@
+.storyAdd {
+    background: var(--bg-addStory);
+    position: relative;
+    max-width: 130px;
+    min-height: 170px;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    overflow: hidden;
+
+    & .storyAdd__icon {
+        position: absolute;
+        bottom: 40px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        left: calc(50% - 15%);
+        padding-left: 10px;
+        padding-top: 10px;
+        color: rgb(29, 143, 236);
+        cursor: pointer;
+    }
+
+    // &::before{
+    //     content:"+";
+    //     position: absolute;
+    //     bottom:40px;
+    //     left:45px;
+    //     display: inline-block;
+    //     font-size: 2.5rem;
+    //     font-weight:lighter;
+    //     background: white;
+    //     color:#1E74FD;
+    //     width: 50px;
+    //     height: 50px;
+    //     text-align: center;
+    //     border-radius: 50px;
+    // }
+
+    & h4 {
+        position: absolute;
+        font-weight: 600;
+        font-size: 0.9rem;
+        bottom: 13px;
+        left: 33px;
+        color: white;
+    }
+}

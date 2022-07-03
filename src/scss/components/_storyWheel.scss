@@ -1,0 +1,52 @@
+.storyWheel {
+    position: relative;
+    display: flex;
+    gap: 0.7rem;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 630px;
+    overflow-x: scroll;
+
+    // &::before{
+    //     z-index: 4;
+    //     position: absolute;
+    //     content:'<';
+    //     padding:6px 11px;
+    //     border-radius: 50px;
+    //     color:rgba(0,0,0,0.6);
+    //     left:-15px;
+    //     top:65px;
+    //     font-size: 20px;
+    //     background-color: white;
+    // }
+
+    &::-webkit-scrollbar {
+        height: 10px;
+    }
+
+    &::-webkit-scrollbar:hover {
+        height: 10px;
+    }
+    &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: rgba(47, 169, 240, 0.5);
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background: rgba(47, 169, 240, 1);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .storyWheel {
+
+        gap:0.5rem;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}

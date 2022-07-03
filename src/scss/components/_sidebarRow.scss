@@ -1,0 +1,76 @@
+.sidebarRow {
+    margin: 12px 2px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s all linear;
+
+    & .sidebarRow__icon {
+        font-size: 1.9rem;
+
+        &.btn-round-md {
+            padding: 11px;
+            color: #fff;
+            top: 0px;
+            position: relative;
+            width: 45px;
+            height: 45px;
+            border-radius: 45px;
+            display: inline-block;
+            line-height: 45px !important;
+            text-align: center;
+        }
+
+        &.bg-blue-gradient {
+            background: linear-gradient(to right, #0575e6, #021b79) !important;
+        }
+        &.bg-orange-gradient {
+            background: linear-gradient(to right, #e44d26, #f16529) !important;
+        }
+        &.bg-yellow-gradient {
+            background: linear-gradient(to right, #f2994a, #f2c94c) !important;
+        }
+        &.bg-red-gradient {
+            background: linear-gradient(to right, #ee0979, #ff6a00) !important;
+        }
+        &.bg-sky-gradient {
+            background: linear-gradient(to right, #05f, #09f) !important;
+        }
+    }
+
+    & .sidebarRow__title {
+        font-size: 0.95rem;
+        margin-left: 0.9rem;
+        font-weight: 600 !important;
+        color: var(--second-color);
+    }
+    &:hover {
+        background-color: rgba(179, 174, 174, 0.13);
+        border-radius: 10px;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+    }
+    &:hover .sidebarRow__title {
+        color: #000;
+    }
+    .dark-theme &:hover .sidebarRow__title {
+        font-family: "Roboto", sans-serif;
+        color: #fff;
+    }
+
+    &.is-active {
+        background-color: rgba(179, 174, 174, 0.13);
+        border-radius: 10px;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+    }
+
+    &.is-active .sidebarRow__title {
+        color: #000;
+    }
+
+    .dark-theme &.is-active .sidebarRow__title {
+        font-family: "Roboto", sans-serif;
+        color: #fff;
+    }
+}

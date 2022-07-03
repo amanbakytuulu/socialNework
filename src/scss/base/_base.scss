@@ -1,0 +1,61 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Montserrat";
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+// .dark-theme ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+//   color: rgb(231, 229, 229) ;
+//   opacity: 0.8; /* Firefox */
+// }
+
+// :-ms-input-placeholder { /* Internet Explorer 10-11 */
+//   color: rgb(231, 229, 229);
+// }
+
+// ::-ms-input-placeholder { /* Microsoft Edge */
+//   color: rgb(231, 229, 229);
+// }
+
+
+ul,
+li {
+  list-style: none;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+input.is-danger {
+  border-color: #f14668 !important;
+}

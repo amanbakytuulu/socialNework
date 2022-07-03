@@ -1,0 +1,89 @@
+.settingLayout {
+    background: var(--bg-color);
+    margin: 0 auto;
+    max-width: 800px;
+    width: 100%;
+    overflow-y: scroll;
+
+    & .section {
+        border: 1px solid var(--border-color);
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top: transparent;
+    }
+
+    form {
+        & div:first-child {
+            & p {
+                color: var(--title-color);
+            }
+        }
+
+        & > .field {
+            & label {
+                color: white;
+                font-weight: 500;
+                margin-bottom: 3px;
+                cursor: pointer;
+                border: 2px dashed #eee;
+            }
+        }
+    }
+
+    & .columns {
+        & .column {
+            padding: 7px 0.75rem;
+
+            & .field {
+                & label {
+                    color: var(--title-color);
+                    font-weight: 500;
+                    margin-bottom: 3px;
+                }
+
+                & input,
+                & textarea {
+                    background-color: var(--bg-color);
+                    border-color: var(--theme-color);
+                    color: var(--title-color);
+
+                    &:not(textarea) {
+                        padding: 20px 15px;
+                    }
+
+                    &::placeholder {
+                        color: var(--second-color);
+                    }
+
+                    &::-moz-placeholder {
+                        color: var(--second-color);
+                    }
+
+                    &::-webkit-input-placeholder {
+                        color: var(--second-color);
+                    }
+                }
+            }
+        }
+    }
+
+    &::-webkit-scrollbar {
+        height: 10px;
+        display: none;
+    }
+
+    // &::-webkit-scrollbar:hover {
+    //     height: 10px;
+    // }
+    // &::-webkit-scrollbar-track {
+    //     background: #f1f1f1;
+    //     border-radius: 10px;
+    // }
+    // &::-webkit-scrollbar-thumb {
+    //     background: rgba(47, 169, 240, 0.5);
+    //     border-radius: 10px;
+    // }
+    // &::-webkit-scrollbar-thumb:hover {
+    //     background: rgba(47, 169, 240, 1);
+    // }
+}

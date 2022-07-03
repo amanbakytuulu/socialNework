@@ -1,0 +1,87 @@
+.notification {
+    font-family: sans-serif;
+    position: absolute;
+    top: 50px;
+    right: 200px;
+    max-width: 330px;
+    width: 100%;
+    padding: 0;
+    opacity: 0;
+    visibility: hidden;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    transition: all 0.25s linear;
+    &.show {
+        top: 80px;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    & h4 {
+        position: relative;
+        font-weight: 700;
+        background-color: var(--container-color);
+        padding: 15px;
+        color: var(--title-color);
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            min-width: 100%;
+            background-color: rgba(175, 166, 166, 0.3);
+            height: 1px;
+        }
+    }
+
+    & ul {
+        padding: 15px 20px;
+        max-height: 415px;
+        overflow-y: scroll;
+    }
+    & ul > li {
+        display: flex;
+
+        & div div {
+            color: var(--title-color);
+
+            & a {
+                text-decoration: none !important;
+            }
+        }
+        
+        & div:last-child {
+            display: flex;
+            flex-direction: column;
+            font-size: 0.9rem;
+            color: #808080;
+
+            & > span {
+                margin-top: 5px;
+                font-size: 0.8rem;
+                margin-bottom: 20px;
+                font-weight: 600;
+                color: #aaaaaa;
+            }
+        }
+    }
+    & .notification__all {
+        cursor: pointer;
+        border-top: "1px solid #aaa";
+        font-weight: 600;
+        color: var(--title-color);
+        background-color: var(--bg-addpost-color);
+
+        &:hover {
+            color: var(--button-color);
+        }
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .notification {
+        right: 0;
+    }
+}

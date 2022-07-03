@@ -1,0 +1,79 @@
+.explore {
+    & .explore__title {
+        background: var(--bg-addpost-color);
+        color: var(--title-color);
+    }
+
+    & .explore__items {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        justify-items:center;
+        grid-auto-rows:max-content;
+        grid-gap: 1rem;
+        height: 100%;
+
+        & .explore__item {
+            display: grid;
+            justify-items: center;
+            border-radius: 5px;
+            max-width: 309.98px;
+            max-height: 349.19px;
+            width: 100%;
+            height: 100%;
+            background-color: var(--bg-addpost-color);
+            padding: 15px;
+
+            & .explore__top {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                & .explore__avatar {
+                    box-shadow: 0px 0px 1px 4px white;
+                }
+
+                & div {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 10px;
+                    color: var(--title-color);
+
+                    & h2 {
+                        font-size: 1.1rem;
+                        font-weight: 700;
+                    }
+                    & p {
+                        font-size: 0.8rem;
+                        color: var(--second-color);
+                    }
+                }
+            }
+
+            & .explore__middle {
+                display: flex;
+                margin:25px 0px;
+                & p {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin: 0px 30px;
+                    font-size: 1.3rem;
+                    font-weight: 700;
+                    color: var(--title-color);
+                    margin-bottom: 20px;
+                    & span {
+                        font-weight: normal;
+                        font-size: 0.8rem;
+                        color: var(--second-color);
+                    }
+                }
+            }
+
+            & button {
+                text-align: center;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

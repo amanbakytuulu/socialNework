@@ -1,0 +1,86 @@
+.is-radius {
+    border-radius: 7px;
+}
+
+.has-shadows {
+    box-shadow: 0px 1px 15px 1px rgba(121, 119, 119, 0.15);
+}
+
+.is-link {
+    background-color: #05f !important;
+    border-radius: 10px;
+}
+
+.has-text-blue {
+    color: #05f;
+    &:hover {
+        color: #f8fbff;
+    }
+}
+
+:hover.has-background-blue {
+    background: #6ba4e9;
+    color: white;
+
+    & .has-text-blue {
+        color: white;
+    }
+}
+
+//header
+.navbar-item .icon,
+.navbar-item .image {
+    cursor: pointer;
+}
+
+.navbar-item img,
+.image img {
+    max-height: -webkit-fill-available;
+    height: inherit;
+}
+
+.navbar-end .control .input {
+    width: 550px;
+    border: none;
+}
+
+//header
+
+.dark-theme .is-darkness-container {
+    background: var(--container-color) !important;
+    color: #f8fbff !important;
+
+    &::placeholder {
+        color: var(--second-color);
+    }
+}
+.dark-theme .is-darkness-bg {
+    background: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    outline: none;
+    border: none;
+
+    &::placeholder {
+        color: var(--second-color);
+    }
+
+    &::-moz-placeholder {
+        color: var(--second-color);
+    }
+
+    &::-webkit-input-placeholder {
+        color: var(--second-color);
+    }
+}
+
+// box
+.box {
+    background-color: var(--container-color);
+}
+
+@media screen and (max-width: 1600px) {
+    .container {
+        max-width: 950px !important; 
+        width: 100%;
+    }
+}
