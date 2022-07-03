@@ -42,7 +42,7 @@ function Login() {
                 <Outlet />
             </div>
             <footer>
-                &copy; Copyright 2021 By SocialApp
+                &copy; Copyright 2022 By Amanchik
             </footer>
         </div >
     )
