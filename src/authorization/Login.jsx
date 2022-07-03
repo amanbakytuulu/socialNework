@@ -1,6 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 import { auth } from '../firebase';
+import logoWhite2 from '../assets/logo/logoWhite2.png';
+import logoBlack2 from '../assets/logo/logoBlack2.png';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { ThemeContext, themes } from '../ThemeContext';
 
