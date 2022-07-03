@@ -17,25 +17,30 @@ function SidebarChat() {
                 <StyledWrap>
                     <Title>Контакты</Title>
                     {
-                        currentUser?.currentUser.chatUsers.filter((user) => {
-                            if (currentUser?.currentUser.isBlocked.length !== 0) {
-                                for (let i = 0; i < currentUser?.currentUser.isBlocked.length; i++) {
-                                    if (user.uid !== currentUser?.currentUser.isBlocked[i].uid) {
-                                        return user
+                        currentUser?.currentUser.chatUsers.length !== 0
+                        &&
+                        (
+                            currentUser?.currentUser.chatUsers.filter((user) => {
+                                if (currentUser?.currentUser.isBlocked.length !== 0) {
+                                    for (let i = 0; i < currentUser?.currentUser.isBlocked.length; i++) {
+                                        if (user.uid !== currentUser?.currentUser.isBlocked[i].uid) {
+                                            return user
+                                        }
                                     }
+                                } else {
+                                    return user
                                 }
-                            } else {
-                                return user
-                            }
-                        }).map((user) => {
-                            return (
-                                <NavLink to={`/chat/${user.uid}`}>
-                                    <SidebarChatRow profile={user.photoURL}
-                                        name={user.firstName}
-                                        newMessage={currentUser?.currentUser.newMessage.includes(user.uid)} />
-                                </NavLink>
-                            )
-                        })
+                            }).map((user) => {
+                                return (
+                                    <NavLink to={`/chat/${user.uid}`}>
+                                        <SidebarChatRow profile={user.photoURL}
+                                            name={user.firstName}
+                                            newMessage={currentUser?.currentUser.newMessage.includes(user.uid)} />
+                                    </NavLink>
+                                )
+                            })
+                        )
+
                     }
                 </StyledWrap>
             </SidebarChats>

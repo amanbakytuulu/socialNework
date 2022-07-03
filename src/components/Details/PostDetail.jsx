@@ -7,6 +7,7 @@ import ImageGallery from 'react-image-gallery';
 import firebase from './../../firebase';
 import { Avatar } from '@mui/material';
 import { useSelector } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 
 function PostDetail({ doc, postik, comments, active, setActive }) {
 
@@ -79,7 +80,7 @@ function PostDetail({ doc, postik, comments, active, setActive }) {
                                             </div>
                                             <div className="modal__description">
                                                 <p className="mb-2">
-                                                    <a href="#" className="mr-0"><strong>{postUser[0]?.user.firstName} - </strong></a>
+                                                    <NavLink to={`/profile/${comment.uid}`} className="mr-0"><strong>{postUser[0]?.user.firstName} - </strong></NavLink>
                                                     {comment.text}
                                                 </p>
                                                 <p className="is-size-7 mt-0 modal__time">

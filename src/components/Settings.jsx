@@ -62,11 +62,11 @@ function Settings() {
               Другие
             </p>
             <ul className="menu-list">
-              <li><a><SidebarRow Icon={NotificationsActiveOutlinedIcon} title="Оповещения" bg_gradient={"btn-round-md bg-yellow-gradient"} />
+              <li><NavLink to={`/notifications`}><SidebarRow Icon={NotificationsActiveOutlinedIcon} title="Оповещения" bg_gradient={"btn-round-md bg-yellow-gradient"} />
                 <span class="icon has-text-grey-light mr-2">
                   <ArrowForwardIosOutlinedIcon fontSize='middle' />
                 </span>
-              </a></li>
+              </NavLink></li>
               <li><a onClick={signOut}><SidebarRow Icon={ExitToAppOutlinedIcon} title="Выйти" bg_gradient={"btn-round-md bg-orange-gradient"} />
                 <span class="icon has-text-grey-light mr-2">
                   <ArrowForwardIosOutlinedIcon fontSize='middle' />

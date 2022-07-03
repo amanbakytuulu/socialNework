@@ -129,7 +129,7 @@ function AddPost() {
                 <div className="addPost__left">
                     <div className="addPost__option">
                         <input type="file" id="option1" onChange={(e) => onHandleChangeImage(e.target.files)} accept="image/*" multiple />
-                        <label htmlFor="option1"><PhotoIcon className="addPost__icon" style={{ color: '#2563EB' }} />Фото/Видео </label>
+                        <label htmlFor="option1"><PhotoIcon className="addPost__icon" style={{ color: '#2563EB' }} />Фото/Gifs </label>
                     </div>
                     <div className="addPost__option"
                         style={{ position: 'relative' }}>

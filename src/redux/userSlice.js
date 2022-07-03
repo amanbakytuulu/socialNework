@@ -60,7 +60,8 @@ export const addNewUser = createAsyncThunk(
                 stories: [],
                 notifications: [],
                 newNotification: false,
-                isBlocked: []
+                isBlocked: [],
+                chatUsers: []
             })
                 .then((newPost) => newPost.get().then((post) => (
                     post.exists && data.push({ doc: post.id, user: post.data() })
@@ -411,10 +412,11 @@ const userSlice = createSlice({
             state.currentUser.currentUser.photoURL = action.payload.url
         },
         updateProfileDate(state, action) {
-            state.currentUser.currentUser.firstName = action.payload.firstName
-            state.currentUser.currentUser.lastName = action.payload.lastName
-            state.currentUser.currentUser.phone = action.payload.phone
-            state.currentUser.currentUser.about = action.payload.about
+            const user = state.users.find(({ user }) => user.uid == state.currentUser.currentUser.uid);
+            user.user.firstName = action.payload.firstName
+            user.user.lastName = action.payload.lastName
+            user.user.phone = action.payload.phone
+            user.user.about = action.payload.about
         },
         updateAddressDate(state, action) {
             state.currentUser.currentUser.location.country = action.payload.country;

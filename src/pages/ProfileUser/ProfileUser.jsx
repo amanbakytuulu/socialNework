@@ -68,7 +68,7 @@ function ProfileUser() {
                                 <button className="button px-5 has-text-weight-semibold is-success is-outlined" onClick={() => onHandleSubscribe(uid)}>Добавить в друзья</button>
                         }
                         <NavLink to={`/chat/${uid}`}><button className="button px-5 has-text-weight-semibold mx-3 is-link ">Отправить сообщение</button></NavLink>
-                        <button className="button p-2" style={{ borderRadius: '50%' }}><KeyboardArrowDownIcon /></button>
+                        {/* <button className="button p-2" style={{ borderRadius: '50%' }}><KeyboardArrowDownIcon /></button> */}
                     </div>
                     <div className="is-flex is-justify-content-space-between">
                         <p className="is-size-5">{myPosts.length > 1000 ? `${myPosts.length}k` : myPosts.length} <span className="has-text-weight-semibold">Посты</span></p>
