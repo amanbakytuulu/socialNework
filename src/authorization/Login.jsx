@@ -1,18 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 import { auth } from '../firebase';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { ThemeContext, themes } from '../ThemeContext';
 
 function Login() {
 
     const [select, setSelect] = useState(0);
     const navigate = useNavigate();
+    const { theme, changeTheme } = useContext(ThemeContext);
 
     const [user] = useAuthState(auth);
 
     useEffect(() => {
         if (user) {
-            navigate('/', {replace:true});
+            navigate('/', { replace: true });
         }
     }, [user])
 
@@ -21,7 +23,9 @@ function Login() {
             <header className="login__header">
                 <div className="login__left">
                     {/* <AppleIcon fontSize="large" /> */}
-                    <NavLink to="/"><h4 style={{ fontWeight: '600' }}>Freeware</h4></NavLink>
+                    <NavLink to="/"><h4 style={{ fontWeight: '600' }}>
+                        <img src={theme === themes.dark ? logoWhite2 : logoBlack2} alt="" width={150} height={150} />
+                    </h4></NavLink>
                 </div>
                 <div className="login__right">
                     <NavLink to="signIn" className={`login_sign ${!select ? 'bg' : ''}`}
